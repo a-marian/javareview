@@ -1,0 +1,40 @@
+{
+  "flashCards": [
+    {
+      "question": "What is the result of the following code?",
+      "code": "public class Example {\n  public static void main(String[] args) {\n    int x = 5;\n    int y = x++;\n    System.out.println(y);\n  }\n}",
+      "options": ["4", "5", "6", "0"],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "What will be the output of the following code?",
+      "code": "String str1 = \"Hello\";\nString str2 = \"Hello\";\nString str3 = new String(\"Hello\");\n\nSystem.out.println(str1 == str2);\nSystem.out.println(str1 == str3);",
+      "options": ["true, true", "true, false", "false, true", "false, false"],
+      "correctAnswer": "true, false"
+    },
+    {
+      "question": "What is the result of the following code?",
+      "code": "ArrayList<String> list = new ArrayList<>();\nlist.add(\"A\");\nlist.add(\"B\");\nlist.add(1, \"C\");\nSystem.out.println(list);",
+      "options": ["[A, B, C]", "[A, C, B]", "[C, A, B]", "Runtime Error"],
+      "correctAnswer": "[A, C, B]"
+    },
+    {
+      "question": "Which of the following is a valid identifier?",
+      "code": "A) 123variable\nB) _privateVar\nC) public\nD) class-name",
+      "options": ["123variable", "_privateVar", "public", "class-name"],
+      "correctAnswer": "_privateVar"
+    },
+    {
+      "question": "What is the result of the following code?",
+      "code": "var x=10;\nfinal var y = 20;\nx=x+y;\ny=x;\nSystem.out.println(x+\" \"+y);",
+      "options": ["30 30", "30 20", "Compilation error at line 3", "Compilation error at line 4"],
+      "correctAnswer": "Compilation error at line 4"
+    },
+    {
+        "question": "What is the output of the following code?",
+        "code": "record Point(int x, int y) {}\n\npublic class Main {\n public static void main(String[] args) {\nvar p1 = new Point(10, 20);\n        var p2 = new Point(10, 20);\n        System.out.println(p1.equals(p2));\n    }\n}",
+        "options": ["false", "true", "Compilation error", "Runtime exception"],
+        "correctAnswer": "Compilation error at line 4"
+      }
+  ]
+} 

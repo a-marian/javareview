@@ -1,6 +1,12 @@
+body {
+  background: #333;
+}
+
+
 .App {
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -14,14 +20,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f5f5f5;
 }
 
 .App-link {
@@ -35,4 +41,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+h2 {
+  background: white;
+  color: black;
+  margin-bottom: 30px;
+  font-size: 2em;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.progress {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.score-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.score-container h2 {
+  color: #2196f3;
+  margin-bottom: 20px;
+}
+
+.reset-button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #1976d2;
 }
