@@ -27,14 +27,301 @@
     {
       "question": "What is the result of the following code?",
       "code": "var x=10;\nfinal var y = 20;\nx=x+y;\ny=x;\nSystem.out.println(x+\" \"+y);",
-      "options": ["30 30", "30 20", "Compilation error at line 3", "Compilation error at line 4"],
-      "correctAnswer": "Compilation error at line 4"
+      "options": ["A) 30 30", "B) 30 20", "C) Compilation error at line 3", "D) Compilation error at line 4"],
+      "correctAnswer": "D"
     },
     {
-        "question": "What is the output of the following code?",
-        "code": "record Point(int x, int y) {}\n\npublic class Main {\n public static void main(String[] args) {\nvar p1 = new Point(10, 20);\n        var p2 = new Point(10, 20);\n        System.out.println(p1.equals(p2));\n    }\n}",
-        "options": ["false", "true", "Compilation error", "Runtime exception"],
-        "correctAnswer": "Compilation error at line 4"
-      }
+      "question": "What is the output of the following code?",
+      "code": "record Point(int x, int y) {}\n\npublic class Main {\n public static void main(String[] args) {\nvar p1 = new Point(10, 20);\n        var p2 = new Point(10, 20);\n        System.out.println(p1.equals(p2));\n    }\n}",
+      "options": ["A) false", "B) true", "C) Compilation error", "D) Runtime exception"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which statement about text blocks is TRUE?",
+      "code": "A) Text blocks are used to create multi-line strings\nB) Text blocks are used to create single-line strings\nC) Text blocks are used to create multi-line comments\nD) Text blocks are used to create single-line comments",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "Which of the following is TRUE about Java packages?",
+      "code": "A) Packages are used to organize classes\nB) Packages are used to organize methods\nC) Packages are used to organize variables\nD) Packages are used to organize constants",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which feature was introduced in Java 16?",
+      "code": "A) Text blocks\nB) Records\nC) Sealed classes\nD) Pattern matching",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the result of the following code?",
+      "code": "public class Test {\n public static void main(String[] args) {\nvar s1 = \"\"\"\nHello\nWorld\"\"\";\nvar s2 = \"Hello\nWorld\";\nSystem.out.println(s1.equals(s2));\n}\n}",
+        "options":["A) true","B) false","C) Compilation error","D) Runtime exception"],
+        "correctAnswer":"A"
+    },
+    {
+      "question": "Which of the following is TRUE about Java packages?",
+      "options": ["A) A class can belong to multiple packages","B) The package statement must be the first non-comment statement in a Java file","C) Package names are conventionally all uppercase","D) Packages are not hierarchical in structure"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What will be the result of attempting to compile and run this code?",
+      "code": "public sealed class Vehicle permits Car, Truck { }\npublic final class Car extends Vehicle { }\npublic non-sealed class Truck extends Vehicle { }\npublic class Motorcycle extends Vehicle { }\n\npublic class Main {\n    public static void main(String[] args) {\n        Vehicle v = new Car();\n        System.out.println(\"Vehicle created\");\n    }\n}",
+      "options": ["A) Compiles and prints \"Vehicle created\"","B) Compilation error in class Vehicle","C) Compilation error in class Motorcycle","D) Runtime exception"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which statement about var in Java is TRUE?",
+      "code": "A) var can be used for method parameters\nB) var can be used for method return types\nC) var can be used without initializing the variable\nD) var can be used for local variables with initializers",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What is the output of this code?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        var list = List.of(1, 2, 3);\n        for (var i : list) {\n            i = i + 1;\n        }\n        System.out.println(list);\n    }\n}",
+      "options": ["A) [1, 2, 3]","B) [2, 3, 4]","C) Compilation error","D) Runtime exception"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which access modifier allows a class member to be accessible within the same class, any class in the same package, and any subclass?",
+      "code": null,
+      "options": ["A) public", "B) protected", "C) default (package-private)", "D) private"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "class Parent {\n    public void display() {\n        System.out.print(\"Parent \");\n    }\n}\n\nclass Child extends Parent {\n    public void display() {\n        System.out.print(\"Child \");\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        Parent p = new Child();\n        p.display();\n    }\n}",
+      "options": ["A) Parent", "B) Child", "C) Parent Child", "D) Compilation error"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which statement about records in Java is TRUE?",
+      "code": null,
+      "options": ["A) Records can extend other classes", "B) Records cannot implement interfaces", "C) Records can have mutable fields", "D) Records automatically provide equals(), hashCode(), and toString() methods"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What is the correct way to implement a singleton pattern in Java 17?",
+      "code": null,
+      "options": ["A) Using a public static field with eager initialization", "B) Using a private constructor and a static factory method with lazy initialization", "C) Using an enum with a single instance", "D) All of the above are valid implementations"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What access levels can be used with a top-level class in Java?",
+      "code": null,
+      "options": ["A) public", "B) protected", "C) default (package-private)", "D) private"],
+      "correctAnswer": "A, C"
+    },
+    {
+      "question": "Given the following class hierarchy, which statement is TRUE?",
+      "code": "sealed abstract class Shape permits Circle, Rectangle, Triangle {}\nfinal class Circle extends Shape {}\nnon-sealed class Rectangle extends Shape {}\nsealed class Triangle extends Shape permits EquilateralTriangle {}\nfinal class EquilateralTriangle extends Triangle {}",
+      "options": ["A) A class that extends Rectangle must be declared final", "B) Triangle can only be extended by EquilateralTriangle", "C) Shape can be extended by any class", "D) Circle must implement all abstract methods of Shape"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What will be the output of the following code?",
+      "code": "interface Greeting {\n    default String greet() {\n        return \"Hello\";\n    }\n}\n\ninterface SpecialGreeting extends Greeting {\n    String greet();\n}\n\nclass EnglishGreeting implements SpecialGreeting {\n    public String greet() {\n        return \"Hi there\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Greeting g = new EnglishGreeting();\n        System.out.println(g.greet());\n    }\n}",
+      "options": ["A) Hello", "B) Hi there", "C) Compilation error", "D) Runtime exception"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "record Point(int x, int y) {\n    public Point {\n        if (x < 0 || y < 0) {\n            throw new IllegalArgumentException(\"Coordinates cannot be negative\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            var p = new Point(-1, 5);\n            System.out.println(\"Point created\");\n        } catch (Exception e) {\n            System.out.println(\"Exception caught\");\n        }\n    }\n}",
+      "options": ["A) Point created", "B) Exception caught", "C) Compilation error", "D) No output"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which statement about sealed classes is correct?",
+      "code": null,
+      "options": ["A) Sealed classes were introduced in Java 17", "B) A sealed class must be abstract", "C) A sealed class must specify permitted subclasses", "D) Subclasses of a sealed class must be in the same package"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "public class Test {\n    private int count;\n    \n    public void increment() {\n        count++;\n    }\n    \n    public static void main(String[] args) {\n        Test t1 = new Test();\n        Test t2 = t1;\n        t1.increment();\n        t2.increment();\n        System.out.println(t1.count);\n    }\n}",
+      "options": ["A) 0", "B) 1", "C) 2", "D) Compilation error"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which functional interface contains a method that takes one argument and returns a boolean?",
+      "code": null,
+      "options": ["A) Consumer<T>", "B) Supplier<T>", "C) Predicate<T>", "D) Function<T, R>"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        var numbers = List.of(1, 2, 3, 4, 5);\n        var result = numbers.stream()\n            .filter(n -> n % 2 == 0)\n            .map(n -> n * 2)\n            .reduce(0, Integer::sum);\n        System.out.println(result);\n    }\n}",
+      "options": ["A) 12", "B) 15", "C) 30", "D) 60"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which is a valid method reference in Java?",
+      "code": null,
+      "options": ["A) String::length()", "B) String::(length)", "C) String::length", "D) String->length"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What does the following code print?",
+      "code": "record Person(String name, int age) {}\n\npublic class Test {\n    public static void main(String[] args) {\n        var people = List.of(\n            new Person(\"Alice\", 25),\n            new Person(\"Bob\", 30),\n            new Person(\"Charlie\", 35)\n        );\n        \n        people.stream()\n            .filter(p -> p.age() > 30)\n            .map(Person::name)\n            .forEach(System.out::println);\n    }\n}",
+      "options": ["A) Alice", "B) Bob", "C) Charlie", "D) No output"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which statement about the following code is TRUE?",
+      "code": "import java.util.function.*;\n\npublic class Test {\n    public static void main(String[] args) {\n        UnaryOperator<String> uo = s -> s.toUpperCase();\n        Function<String, String> f = s -> s.toUpperCase();\n        \n        System.out.println(uo.apply(\"hello\").equals(f.apply(\"hello\")));\n    }\n}",
+      "options": ["A) The code will not compile", "B) The code will print \"false\"", "C) The code will print \"true\"", "D) The code will throw a runtime exception"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which statement about try-with-resources is TRUE?",
+      "code": null,
+      "options": ["A) Resources must implement the Closeable interface", "B) Resources must implement the AutoCloseable interface", "C) Multiple resources declared in a try-with-resources statement are closed in declaration order", "D) Resources declared in a try-with-resources statement are closed in reverse declaration order"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        try {\n            throw new RuntimeException(\"Exception 1\");\n        } catch (Exception e) {\n            throw new RuntimeException(\"Exception 2\");\n        } finally {\n            System.out.println(\"Finally block\");\n        }\n    }\n}",
+      "options": ["A) Exception 1", "B) Exception 2", "C) Finally block", "D) Finally block followed by Exception 2's stack trace"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "Which exception is a checked exception?",
+      "code": null,
+      "options": ["A) NullPointerException", "B) ArrayIndexOutOfBoundsException", "C) IllegalArgumentException", "D) IOException"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What happens when the following code is compiled and executed?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        try {\n            methodA();\n        } catch (Exception e) {\n            System.out.println(\"Caught in main: \" + e.getMessage());\n        }\n    }\n    \n    public static void methodA() throws Exception {\n        try {\n            methodB();\n        } catch (RuntimeException e) {\n            throw new Exception(\"Error in methodA\", e);\n        }\n    }\n    \n    public static void methodB() {\n        throw new RuntimeException(\"Error in methodB\");\n    }\n}",
+      "options": ["A) Prints: Caught in main: Error in methodB", "B) Prints: Caught in main: Error in methodA", "C) Throws an uncaught RuntimeException", "D) Compilation error"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What happens when the following code is executed?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        try (var resource = new Resource()) {\n            resource.process();\n        } catch (Exception e) {\n            System.out.println(\"Caught: \" + e.getMessage());\n        }\n    }\n    \n    static class Resource implements AutoCloseable {\n        public void process() throws Exception {\n            throw new Exception(\"Process failed\");\n        }\n        \n        public void close() throws Exception {\n            throw new Exception(\"Close failed\");\n        }\n    }\n}",
+      "options": ["A) Prints: Caught: Process failed", "B) Prints: Caught: Close failed", "C) Throws an uncaught exception", "D) The first exception from process() is caught and the exception from close() is added as a suppressed exception"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "import java.util.concurrent.*;\n\npublic class Test {\n    public static void main(String[] args) throws Exception {\n        ExecutorService executor = Executors.newSingleThreadExecutor();\n        Future<String> future = executor.submit(() -> \"Result\");\n        \n        System.out.println(future.get());\n        executor.shutdown();\n    }\n}",
+      "options": ["A) Result", "B) java.util.concurrent.Future@xxxx", "C) Compilation error", "D) Runtime exception"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which method in the Stream API enables parallel processing?",
+      "code": null,
+      "options": ["A) concurrent()", "B) parallel()", "C) async()", "D) forEach()"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which class from the java.util.concurrent package is designed for processing parallel operations on a collection?",
+      "code": null,
+      "options": ["A) ConcurrentHashMap", "B) LinkedBlockingQueue", "C) ForkJoinPool", "D) ThreadPoolExecutor"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What will happen when executing the following code?",
+      "code": "import java.util.concurrent.atomic.*;\n\npublic class Test {\n    public static void main(String[] args) {\n        AtomicInteger counter = new AtomicInteger(0);\n        \n        Runnable task = () -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.incrementAndGet();\n            }\n        };\n        \n        Thread t1 = new Thread(task);\n        Thread t2 = new Thread(task);\n        \n        t1.start();\n        t2.start();\n        \n        try {\n            t1.join();\n            t2.join();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        System.out.println(counter.get());\n    }\n}",
+      "options": ["A) A number less than 2000", "B) Exactly 2000", "C) A number greater than 2000", "D) The code does not compile"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What does the following code print?",
+      "code": "import java.util.stream.*;\n\npublic class Test {\n    public static void main(String[] args) {\n        var result = IntStream.rangeClosed(1, 5)\n            .parallel()\n            .map(n -> n * 2)\n            .sequential()\n            .sum();\n        \n        System.out.println(result);\n    }\n}",
+      "options": ["A) 30", "B) 15", "C) A random number between 0 and 30", "D) Compilation error"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which statement about the Java Module System is TRUE?",
+      "code": null,
+      "options": ["A) The Java Module System was introduced in Java 9", "B) A module must export all its packages by default", "C) The module-info.java file must be placed in the root directory of the project", "D) Private classes in exported packages are accessible to other modules"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which directive is used in a module descriptor to indicate that a module needs another module at compile time but not at runtime?",
+      "code": null,
+      "options": ["A) requires", "B) requires static", "C) requires transitive", "D) requires optional"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "How can a service provider module register an implementation of a service interface?",
+      "code": null,
+      "options": ["A) exports service to provider", "B) provides service with implementation", "C) uses service", "D) requires service"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What happens if a module tries to access a class from a package that is not exported by its module?",
+      "code": null,
+      "options": ["A) A warning is issued at compile time", "B) A compilation error occurs", "C) The code compiles but throws a runtime exception", "D) The access is allowed, but a warning is logged"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which of the following is NOT a valid directive in a module descriptor?",
+      "code": null,
+      "options": ["A) requires", "B) exports", "C) imports", "D) opens"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which of the following creates an unmodifiable list in Java 17?",
+      "code": null,
+      "options": ["A) Collections.unmodifiableList(new ArrayList<>())", "B) new ArrayList<>().makeUnmodifiable()", "C) List.of(1, 2, 3)", "D) Arrays.asList(1, 2, 3)"],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        var map = Map.of(1, \"One\", 2, \"Two\", 3, \"Three\");\n        map.put(4, \"Four\");\n        System.out.println(map.size());\n    }\n}",
+      "options": ["A) 3", "B) 4", "C) Compilation error", "D) UnsupportedOperationException at runtime"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What is the result of the following stream operation?",
+      "code": "List<String> words = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\nvar result = words.stream()\n    .collect(Collectors.groupingBy(\n        String::length,\n        Collectors.mapping(\n            String::toUpperCase,\n            Collectors.toList())));",
+      "options": ["A) A Map<Integer, List<String>> with entries {5=[APPLE], 6=[BANANA, CHERRY], 4=[DATE]}", "B) A Map<String, List<Integer>> with entries {\"APPLE\"=[5], \"BANANA\"=[6], \"CHERRY\"=[6], \"DATE\"=[4]}", "C) A List<String> with values [\"APPLE\", \"BANANA\", \"CHERRY\", \"DATE\"]", "D) Compilation error"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which statement about Stream operations is TRUE?",
+      "code": null,
+      "options": ["A) Stream operations can modify the source collection", "B) Stream operations are always lazy", "C) Terminal operations can return another Stream", "D) Intermediate operations are executed when a terminal operation is invoked"],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What does the following code print?",
+      "code": "var set = Set.of(\"apple\", \"banana\", \"cherry\");\nvar list = new ArrayList<>(set);\nCollections.sort(list);\nSystem.out.println(list.get(0));",
+      "options": ["A) apple", "B) banana", "C) cherry", "D) Compilation error"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which of the following is the correct way to read all lines from a file in Java 17?",
+      "code": null,
+      "options": ["A) Files.readAllLines(Paths.get(\"file.txt\"))", "B) Files.readAllLines(\"file.txt\")", "C) FileReader.readAllLines(\"file.txt\")", "D) Paths.get(\"file.txt\").readAllLines()"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the result of the following code?",
+      "code": "Path path1 = Path.of(\"/home/user/docs\");\nPath path2 = Path.of(\"/home/user/docs/file.txt\");\nSystem.out.println(path1.relativize(path2));",
+      "options": ["A) /home/user/docs/file.txt", "B) file.txt", "C) /file.txt", "D) ../file.txt"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which interface is used for walking a directory tree in NIO.2?",
+      "code": null,
+      "options": ["A) DirectoryStream", "B) FileVisitor", "C) PathMatcher", "D) WatchService"],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "try {\n    Files.createDirectories(Path.of(\"/temp/test/dir\"));\n    Path file = Files.createFile(Path.of(\"/temp/test/dir/file.txt\"));\n    Files.writeString(file, \"Hello World\");\n    String content = Files.readString(file);\n    System.out.println(content.length());\n} catch (IOException e) {\n    System.out.println(\"IO Error\");\n}",
+      "options": ["A) 11", "B) 12", "C) IO Error", "D) The code doesn't compile"],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which option correctly serializes and deserializes an object in Java?",
+      "code": "A) \ntry (var out = new ObjectOutputStream(new FileOutputStream(\"data.ser\"))) {\n    out.writeObject(object);\n}\ntry (var in = new ObjectInputStream(new FileInputStream(\"data.ser\"))) {\n    Object obj = in.readObject();\n}\n\nB)\ntry (var out = new DataOutputStream(new FileOutputStream(\"data.ser\"))) {\n    out.writeObject(object);\n}\ntry (var in = new DataInputStream(new FileInputStream(\"data.ser\"))) {\n    Object obj = in.readObject();\n}\n\nC)\ntry (var out = new FileWriter(\"data.ser\")) {\n    out.write(object.toString());\n}\ntry (var in = new FileReader(\"data.ser\")) {\n    Object obj = in.read();\n}\n\nD)\ntry (var out = new PrintWriter(\"data.ser\")) {\n    out.println(object);\n}\ntry (var in = new Scanner(new File(\"data.ser\"))) {\n    Object obj = in.nextObject();\n}",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswer": "A"
+    }
   ]
 } 
