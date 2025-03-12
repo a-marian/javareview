@@ -2,7 +2,7 @@
   "name": "javareview",
   "version": "0.1.0",
   "homepage": "https://a-marian.github.io/javareview",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
