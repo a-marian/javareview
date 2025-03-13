@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FlashCard from './components/FlashCard';
-import flashCardsData from './data/flashCards.json';
+import flashCardsData from './static/data/flashCards.json';
 import './App.css';
 
 function App() {
