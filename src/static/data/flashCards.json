@@ -322,6 +322,12 @@
       "code": "A) \ntry (var out = new ObjectOutputStream(new FileOutputStream(\"data.ser\"))) {\n    out.writeObject(object);\n}\ntry (var in = new ObjectInputStream(new FileInputStream(\"data.ser\"))) {\n    Object obj = in.readObject();\n}\n\nB)\ntry (var out = new DataOutputStream(new FileOutputStream(\"data.ser\"))) {\n    out.writeObject(object);\n}\ntry (var in = new DataInputStream(new FileInputStream(\"data.ser\"))) {\n    Object obj = in.readObject();\n}\n\nC)\ntry (var out = new FileWriter(\"data.ser\")) {\n    out.write(object.toString());\n}\ntry (var in = new FileReader(\"data.ser\")) {\n    Object obj = in.read();\n}\n\nD)\ntry (var out = new PrintWriter(\"data.ser\")) {\n    out.println(object);\n}\ntry (var in = new Scanner(new File(\"data.ser\"))) {\n    Object obj = in.nextObject();\n}",
       "options": ["A", "B", "C", "D"],
       "correctAnswer": "A"
+    },
+    {
+      "question": "What is the output of the following code?",
+      "code": "Stream<String> stream = Stream.of(\"A\", \"B\", \"C\");\nstream.forEach(System.out::print);\nstream.forEach(System.out::print);",
+      "options": ["A) ABCABC ", "B) ABC", "C) Compilation error", "D) Runtime exception"],
+      "correctAnswer": "D"
     }
   ]
 } 
