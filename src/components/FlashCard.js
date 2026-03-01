@@ -3,7 +3,7 @@ import './FlashCard.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const FlashCard = ({ question, code, options, correctAnswer, onAnswer }) => {
+const FlashCard = ({ question, code, options, correctAnswer, explanation, onAnswer }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showResult, setShowResult] = useState(false);
@@ -59,6 +59,11 @@ const FlashCard = ({ question, code, options, correctAnswer, onAnswer }) => {
           {showResult && (
             <div className="result-message">
               {selectedAnswer === correctAnswer ? '✅ Correct!' : '❌ Try again!'}
+            </div>
+          ) && (
+            <div className="explanation-container">
+              <h3>Explanation</h3>
+              <p>{explanation}</p>
             </div>
           )}
         </div>

@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Java Code Review Flash Cards</h1>
+      <h1>Java Quiz</h1>
       {showScore ? (
         <div className="score-container">
           <h2>Quiz Complete!</h2>
@@ -41,9 +41,6 @@ function App() {
         </div>
       ) : (
         <>
-          <div className="progress">
-            Question {currentCardIndex + 1} of {flashCardsData.flashCards.length}
-          </div>
           <FlashCard
             {...flashCardsData.flashCards[currentCardIndex]}
             onAnswer={handleAnswer}
